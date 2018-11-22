@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .btns{ background: grey; }
+    button{ margin-left: 20px;; border:0 ;font-size: 14px;}
+    .content{ padding: 10px; background: navajowhite; width: 300px; margin: 40px auto;}
+    .yangshi{ padding: 40px;  height: 400px;}
+    .btn-class{    margin-top: 300px;}
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="content">
+            <div v-if="xianshi==='one'" class="yangshi">
+                <p>1：请输入您的性别：</p>
+                <input type="radio" value="man" v-model="chose"/><label>男</label>
+                <input type="radio" value="women" v-model="chose"/><label>女</label>
+                <input type="radio" value="mimi" v-model="chose"/><label>秘密</label>
+                <btn v-bind:close="chose" :xingqu="xingqu" v-on:chongzhi="chose=''" v-bind:xianshi="xianshi" @xiayibu="xianshi=$event"></btn>
+            </div>
+            <div v-else-if="xianshi==='two'" class="yangshi">
+                    <p>2：请选择您的兴趣爱好：</p> 
+                    <input type="checkbox" value="book" v-model="xingqu" /><label>看书</label> 
+                    <input type="checkbox" value="swim" v-model="xingqu" /><label>游泳</label>
+                     <input type="checkbox" value="run" v-model="xingqu" /><label>跑步</label>
+                    <input type="checkbox" value="movition" v-model="xingqu" /><label>电影</label>
+                    <input type="checkbox" value="music" v-model="xingqu" /><label>音乐</label>
+                     <input type="checkbox" value="play" v-model="xingqu" /><label>玩</label>
+            <btn v-bind:close="chose"  @chongzhi="xingqu=[]" :xingqu="xingqu" :xianshi="xianshi" @xiayibu="xianshi=$event" @shangyi="xianshi=$event"></btn>
+            </div>
+            <div v-else class="yangshi">
+                    <p>3：请介绍下您自己：</p>  
+                    <textarea placeholder="不少于10字" v-model="content"></textarea>
+                    <btn v-bind:close="chose" @chongzhi="content=''" :content="content" :xingqu="xingqu" :xianshi="xianshi" @xiayibu="xianshi=$event" @shangyi="xianshi=$event" @tijiao="content=$event"></btn>
+            </div>
+        </div>
+    </div>
+ <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> 
+ <script>
+     Vue.component('btn',{
+         template:'<div class="btn-class"><button v-if="count<3" :class="getClass()" @click="xiayibu()">下一步</button><button v-else @click="tijiao()" :class="getClass()">提交</button>'+
+            '<button v-show="shangyibu" @click="shangyi">上一步</button>'+
+            '<button @click="chongzhi">重置</button></div>',
+            //close 代表性别  xianshi:控制三页的显示， xingqu: 代表兴趣   content： 最后一页的内容
+            props:['close','xianshi','xingqu','content'],
+            data: function(){
+                return {
+                    count:1,
+                    shangyibu:false
+                }
+            },
+            methods: {
+                //每一步的按钮阴影控制
+                getClass: function(){
+                    switch (this.count){
+                        case 1:{
+                            if(this.close.length===0){
+                        return  'btns';
+                         }
+                           break;
+                        }
+                        case 2:{
+                            if(this.xingqu.length<3){
+                                return  'btns';
+                            }
+                               break;
+                         };
+                        case 3:{
+                            if(this.content.length<10){
+                                return 'btns';
+                            }
+                            break;
+                        }
+                    }
+                },
+                //下一步逻辑
+                xiayibu: function(){
+                    switch (this.count){
+                        case 1:{
+                            if(this.close.length===0){
+                                return
+                            }  
+                            else{
+                                this.count++  
+                            if(this.xianshi==='one'){
+                                this.shangyibu=true
+                                this.$emit('xiayibu','two')
+                              }
+                          }
+                                break;
+                        };
+                        case 2 :{    //这里也要注意，说明是string
+                            if(this.xingqu.length<3){
+                                 return
+                            }  else{
+                                this.count++
+                            if(this.xingqu.length<4&&this.xingqu.length>=1){
+                                this.$emit('xiayibu','three') 
+                              }      
+                            }
+                            break;
+                        };
+                        default: {
+                            break;
+                          }
+                    }
+                  
+                },
+                //重置按钮
+                chongzhi: function(){
+                   this.$emit('chongzhi')
+            },
+            //上一步
+                shangyi: function(){
+              
+                    switch (this.count){
+                        case 2:{
+                            this.$emit('shangyi','one')
+                            this.count-=1
+                            this.getClass();
+                            break;
+                        
+                        };
+                        case 3:{
+                            this.$emit('shangyi','two')
+                            this.count--
+                            this.getClass()
+                            break;
+                        
+                        }
+                    }
+                },
+            //提交
+            tijiao: function(){
+              
+                if(this.content.length<10){
+                    return
+                }else{
+                    this.$emit('tijiao','已经提交成功')
+                }
+        
+            }
+        }
+     })
+     var app= new Vue({
+         el:'#app',
+         data:{
+             chose: '',//性别
+             xianshi: 'one',
+            xingqu:[],//兴趣   //这里是我之前迷惑的地方
+            content:'' ,//最后内容
+            pagename:['one','two']
+         },
+         method: {
+            
+         }
+     })
+ </script>  
+</body>
+</html>

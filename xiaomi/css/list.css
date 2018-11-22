@@ -1,0 +1,268 @@
+/*全局样式设置*/
+*{
+    padding: 0;
+    margin: 0;
+    -moz-user-select: none; /*火狐*/
+    
+        -webkit-user-select: none; /*webkit浏览器*/
+        -ms-user-select: none; /*IE10*/
+        -khtml-user-select: none; /*早期浏览器*/
+        user-select: none;
+}
+ul{ 
+   list-style: none;
+}
+a {
+    text-decoration: none;
+}
+body{
+    background: #8080800d;
+}
+/*头部导航条*/
+.header{
+    width: 100%;
+    background: #000000e8;
+}
+.nav{
+    overflow: hidden;
+    font-size: 12px;
+}
+.w{
+    margin: 0 4.65625em;
+    overflow: hidden;
+}
+.nav-left{
+    float: left;
+}
+.nav-right{
+    float: right;
+}
+.nav-left .nav-item{
+    float: left;
+    font-size: 12px;
+    color: #999;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-right: 1em;
+}
+.nav ul a{
+  color: #999
+}
+.nav .nav-left span{
+    padding-left: 1em;
+}
+.nav .nav-right .nav-item{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    float: left;
+    margin-right: 1em;
+    color:#999
+}
+.nav .nav-right span{
+    padding-left: 1em;
+}
+.nav .nav-right .shopcar a{
+    margin-top: -0.7em;
+    display: inline-block
+}
+.nav .nav-right .nav-shop-number{
+    padding-left: 0em;
+}
+/*导航栏结束*/
+/*搜索框对应栏开始*/
+.menu{
+    margin-top: 1em;
+}
+.menu-common .menu-left{
+    float: left;
+}
+.menu-left .logo{
+    font-size: 30px;
+    height: 2.2em;
+    width: 2.2em;
+    float: left;
+    text-align: center;
+    line-height: 2.2em;
+    background: #ffa700;
+    margin-right: 1em;
+}
+.menu-left .menu-add{
+    float: left;
+    /* display: inline-block; */
+    dispaly: block;
+    /* display: inline; */
+    /* width: 2.2em; */
+    height: em;
+    height: 4.125em;
+}
+.menu-common.menu-middle{
+    float: left;
+    height: 4.125em;
+    line-height: 4.125em;
+}
+.menu-common.menu-middle span{
+    display: inline-block;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+.menu-search-button{
+    display: inline-block;
+  
+    height: 2em;
+    
+    width: 2em;
+    line-height: 2em;
+    text-align: center;
+    background: #ff8f00;
+    margin-left: -0.38em;
+    margin-top: 0.em;
+    vertical-align: middle;
+}
+.menu-serach-content{
+    
+    display: inline-block;
+    height: 2.4em;
+    width: 17em;
+    padding-left: 0.5em;
+    border: none;
+    line-height: 2.4em;
+    
+}
+.menu-common.menu-search{
+    float: right;
+    height: 4.125em;
+    line-height: 4.125em;
+}
+.line{
+    border: 0;
+    height: 0.2em;
+    background: blue;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+/*商品区*/
+.thing{
+    background: #ebf5eb;
+}
+.thing .ting_title .thing_title_one{
+    font-size: 20px;
+    font-weight: 500;
+    padding-right: 0.5em;
+}
+.ting_title{
+    margin: 1em 0;
+}
+.thing_content_list{
+  overflow: hidden;
+}
+.thing_content_list .quick-item{
+    text-align: center;
+    background: #fcfefc;
+    width: 20%;
+    float: left;
+    position: relative;
+    height: 16em;
+    padding: 1em 0em;
+    margin: 1em 1.87em;
+}
+.thing_content_list .quick-item.first{
+  
+}
+.thing_content_list .quick-item.last{
+   
+   
+}
+.thing_content_list .quick-item .active-news{
+        /* color: red; */
+        background: red;
+        color: white;
+      
+        display: block;
+        width: 4em;
+      
+        margin: -1em auto 1em auto;
+
+}
+.thing_content_list .quick-item .quick-detail{
+    font-size: 13px;
+}
+.quick-item .quick-detail span{
+    margin-top:0.5em
+}
+.thing_content_list .quick-item .quick-detail .new_price{
+    color: red
+}
+.thing_content_list .quick-item a{
+    display: block;
+    width: 100%;
+   
+}
+.thing_content_list .quick-item img{
+    width: 60%;
+    heigth: 160px;
+    object-fit: cover;
+    height: 10em;
+    display: block;
+    margin: 0 auto;
+}
+/*footer*/
+.footer .fuwu{
+    overflow: hidden;
+}
+.fuwu a{
+    color: lightslategrey;
+    /* padding-right: 6em; */
+    /* padding-left: 6em; */
+    /* padding: 2em; */
+    float: left;
+    height: 2em;
+    width: 6em;
+    line-height: 2em;
+    text-align: center;
+    padding: 0 4em;
+    border-right: 1px solid;
+}
+.fuwu a span{
+
+}
+.footer .tongdao{
+
+}
+.footer table tbody tr{
+
+} 
+.footer table tbody tr a{
+    color: darkgray;
+    font-size: 12px;
+    padding: 1em 0;
+}
+.footer .photo-number{
+    float: left;
+    padding: 2em 0;
+}
+.footer .content p{
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    color: red;
+}
+.footer table{
+    float: left;
+    width: 80%;
+    /* padding: 1em; */
+    /* margin-left: 1em; */
+    text-align: left;
+    padding: 1em 0;
+}
+/*提示文字*/
+.tips{
+    position: fixed;
+    /* left: 0; */
+    /* right: -7em; */
+    top: 50%;
+    font-size: 30px;
+    color: blueviolet;
+    height: 1.2em;
+    width: 7em;
+}
+

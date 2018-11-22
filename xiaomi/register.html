@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{margin: 0; padding:0;
+        -moz-user-select: none; /*火狐*/
+
+    -webkit-user-select: none; /*webkit浏览器*/
+    -ms-user-select: none; /*IE10*/
+    -khtml-user-select: none; /*早期浏览器*/
+    user-select: none;
+    }
+     .register_in{
+        width: 400px;
+    height: 500px;
+    background: aliceblue;
+    margin: 50px auto;
+    padding: 40px;
+     }
+     .register_in .register_info{
+           text-align: center;
+     }
+     .register_in div{
+        height: 30px;
+        line-height: 30px;
+    padding: 10px;
+     }
+     .register_in label{
+        width: 100px;
+    display: inline-block;
+     }
+     .register_in input{
+        width: 250px;
+    height: 30px;
+    outline: none;
+     }
+     .register_in btn{
+        border: 1px solid gainsboro;
+    width: 40px;
+    height: 30px;
+    background: cornsilk;
+    padding: 20px;
+    border-radius: 3px;
+    cursor: pointer;
+     }
+     .register_in .register_come{
+        text-align: center;
+    margin-top: 30px;
+     }
+     .register_in .go_login{
+        margin-left: 40px;
+     }
+     .error{
+         visibility: hidden; color: red; text-align: center;
+     }
+    </style>
+</head>
+<body>
+        <div class="register_in">
+                <div class="register_info"><h2>请注册！</h2></div>
+                <div class="error"></div>
+             <div class="register_user"><label>用户名:</label><input must="must"  id="r_user" value="" type="text" placeholder="请输入用户名"/></div>
+            <div class="register_password"><label>密码:</label><input  value="" must="must" id="r_password" type="password" placeholder="请输入密码"/></div>
+            <div class="repeat_password"><label>确认密码:</label><input value="" must="must" id="r_rpassword" type="password" placeholder="请再次输入密码"/></div>
+            <div class="phone_number"><label>手机号:</label><input must="must" value="" type="text" id="munber" placeholder="请输入手机号"/></div>
+            <div class="phone_number"><label>Emil:</label><input must="must" value="" type="text" id="r_email" placeholder="请输入email"/></div>
+            <div class="phone_number"><label>问题:</label><input must="must" value="" type="text" id="r_question" placeholder="请输入问题"/></div>
+            <div class="phone_number"><label>答案:</label><input must="must" value="" type="text" id="r_answer" placeholder="请输入答案"/></div>
+            
+            <div class="register_come"><btn class='submits'>注册</btn>
+                <btn class='go_login'>已有密码,去登陆</btn>
+            </div>  
+        </div>
+        <script src="http://mockjs.com/dist/mock.js"></script>
+          <script src='js/jquery.1.10.2.js'></script>
+        <script src=js/rejister.js></script>
+</body>
+</html>

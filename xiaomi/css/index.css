@@ -1,0 +1,986 @@
+.nav {
+    background-color: black;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    top: 0;
+}
+.gotop{
+    position: fixed;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    top: 600px;
+    background: grey;
+    right: 2%;
+    text-align: center;
+    display: none;
+}
+.err{
+    visibility: hidden; color: red; text-align: center;
+}
+/*遮罩层登录*/
+.zhezhao {
+    position: fixed;
+    left: 0;
+    right: 0;
+    background: grey;
+    top: 0;
+    bottom: 0;
+    z-index: 10001;
+    display: none;
+}
+.zhezhao .login_in{
+    width: 400px;
+    height: 300px;
+    background: aliceblue;
+    margin: 50px auto;
+    padding: 40px;
+}
+.login_info{
+    text-align: center
+}
+.login_in .login_come{
+    text-align: center;
+    margin-top: 30px;
+}
+.login_come btn{
+    cursor: pointer;
+    width: 50px;
+    height: 40px;
+    padding: 10px;
+    background: navajowhite;
+    border: 1px solid grey;
+    border-radius: 4px;
+}
+.login_come .forgetPass{
+    margin-left: 30px;
+}
+.login_in div{
+    height: 40px;
+    line-height: 40px;
+    margin: 10px;
+}
+.login_in input{
+    heigth: 40px;
+    height: 20px;
+    width: 200px;
+    /* border: none; */
+    outline: none;
+}
+.login_in label{
+    width: 100px;
+    display: inline-block;
+}
+.w{
+
+    width: 1200px; margin: 0 auto;
+}
+body{
+    background-color:#f5f5f5;
+}
+ul{
+    list-style: none;
+}
+*{
+    margin: 0; padding: 0;
+    text-decoration: none;
+    -moz-user-select: none; /*火狐*/
+    
+        -webkit-user-select: none; /*webkit浏览器*/
+        -ms-user-select: none; /*IE10*/
+        -khtml-user-select: none; /*早期浏览器*/
+        user-select: none;
+}
+.nav .nav-left{
+    float: left;
+    overflow: hidden;
+}
+.nav .nav-right{
+    float:right;
+    overflow: hidden;
+}
+.nav-right .login .two{
+    display: none;
+}
+/*css3动画属性*/
+
+.nav .nav-right .login a{
+    color: red;
+  animation:logins 2s infinite ease-in-out alternate;
+  -moz-animation:logins 2s infinite ease-in-out alternate;
+  -webkit-animation:logins 2s infinite ease-in-out alternate;
+} 
+@keyframes logins{
+   from{ margin-right:0;color:'#999'}
+   to{margin-right:20px;}
+}
+@-webkit-keyframes login{
+    from{ margin-right:0;color:'#999'}
+    to{margin-right:20px;}
+}
+@-moz-keyframes  login{
+    from{ margin-right:0;color:'#999'}
+    to{margin-right:20px;}
+}
+.nav  .nav-item {
+    color: #bbb;
+    float: left;
+    padding: 5px 10px 5px 0px;
+}
+.nav  .nav-item span{
+    padding: 0 0 0 10px;
+    color: #555;
+}
+
+.nav  .nav-item a {
+    font-size: 12px;
+    color: #999; 
+    text-decoration: none;
+    cursor: pointer;
+}
+.people_phone {
+    display: none;
+    position: fixed;
+    top: 60%;
+    right: 80px;
+    background: white;
+    border-radius: 3px;
+}
+.woqu:hover .people_phone{
+    display: block;
+}
+.people_phone .trangel_tubiao{
+    width: 0;
+    height: 0;
+    border: 5px solid red;
+    border-color: transparent;
+    border-left: 5px solid red;
+    position: absolute;
+    right: -10px;
+    top: 20%;
+}
+/* 三角形 */
+.trangle{
+    width:0;
+    height: 0;
+ 
+    border: 5px solid red;
+    border-color:transparent;
+    border-bottom: 5px solid white;
+    position: absolute;
+    left: 620px;
+    display:none;
+}
+.nav .app a{
+    color: red
+}
+.nav .app .erweima{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    background: white;
+    left: 520px;
+    top: 38px;
+    display:none;
+}
+.nav .app .erweima img{
+    width: 70%;
+    padding-top: 20px;
+    
+}
+/*购物车动态生成模块*/
+.shop_thing{
+    height: 100px;
+    line-height: 100px;
+    width: 200px;
+    position: absolute;
+    background: white;
+    right: 74px;
+    top: 34px;
+    text-align: center;
+}
+.nav .app .erweima p{
+    font-size: 12px;
+}
+.nav-ul {
+    overflow: hidden;
+}
+.nav  .nav-item a:hover {
+    color:white;
+}
+.nav .shopcar{
+    padding-left: 20px;   
+}
+
+.nav-right :nth-child(2) a{
+    color: red
+}
+.nav .shopcar a{
+    color: red
+}
+.nav .shopcar i{
+    padding-right:5px;
+}
+.nav .nav-item .nav-shop-number {
+    padding: 0px 2px;
+    font-size: 12px;
+}
+/*主菜单*/
+.menu {margin-top: 10px;
+    overflow: hidden;
+}
+.menu-left{
+ float:left;
+ margin-top: 30px;
+
+}
+.menu-left .logo{
+    font-size: 30px;
+    background: #ffb200;
+    padding: 10px;
+    display: inline-block;
+    transition: all 2s ease-in-out 
+   }
+   /*logo旋转样式*/
+   .logo:hover{
+     transform: rotate(360deg) scale(1.2);
+
+   }
+   /*隐藏下拉菜单显示*/
+   .menu-middle-content{
+    position: absolute;
+    z-index: 1000;
+    /* top: 157px; */
+   top:122px;
+    width: 100%;
+    background: #e3efe3;
+    left:0
+   }
+   .menu-middle-content ul{
+    padding: 20px 0;
+    border-top: 1px solid grey;
+    overflow: hidden;
+
+   }
+   .menu-middle-content ul li{
+    float: left;
+    text-align: center;
+    font-size: 14px;
+    color: #808080d6;
+    /* background: white; */
+    margin: 0 17px;
+    padding: 10px 20px;
+    background: white;
+   }
+   .menu-middle-content ul li a{
+    display: block;
+   }
+   .menu-middle-content ul li a img {
+       min-height: 150px;
+       width: 150px;
+       object-fit: cover;
+   }
+   .menu-middle-content ul li p{
+       line-height: 20px;
+   }
+   .menu-middle-content ul .price{
+       color: red
+   }
+
+
+   .menu-left .menu-add{
+    background: black;
+    height: 60px;
+    /* line-height: 50px; */
+    width: 200px;
+    vertical-align: top;
+    display: inline-block;
+    margin-left: 20px;
+   
+}
+.menu-common {
+    margin-top: 30px;
+}
+.menu-left .menu-add img{
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+   
+.menu-middle{
+    float: left;
+    /* padding: 20px 10px; */
+}
+.menu-middle span {
+    display: inline-block;
+    padding: 0px 12px 0px 10px;
+    margin: 0;
+    float: left;
+    height: 82px;
+    line-height: 60px;
+}
+.menu-middle span:hover{
+    color: red;
+}
+.menu-search{
+float: right;
+padding-top: 12px;
+}
+.menu-serach-content{
+    border: 1px solid #00000030;
+    height: 30px;
+    width: 200px;
+    float:left;
+    outline: none;
+    font-size: 16px;
+    padding-left: 10px;
+
+}
+.menu-search-button{
+    height: 30px;
+    width: 30px;
+    /* background: black; */
+    display: inline-block;
+    line-height: 32px;
+    text-align: center;
+    border: 1px solid #cfcfcf;
+    margin-left: -1px;
+}
+.menu-search-button:hover{
+    background: red
+}
+.menu-side{
+   
+    position: relative;
+    height: 450px;
+} 
+.menu-side .menu-parent{
+    padding: 10px 0px;
+    position: absolute;
+    width: 280px;
+    
+    z-index: 500;
+
+}
+.menu-side .menu-parent .meun-item{
+    padding: 10px 20px 10px 10px;
+    text-align: right;
+    color: rgba(255, 255, 255, 1);
+}
+.menu-side .menu-parent .meun-item:hover{
+    background: red
+}
+.menu-side .menu-parent .meun-item a {
+    padding-right: 20px;
+    float: left;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+.menu-photo{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+/*左侧菜单出来子菜单*/
+.menu-item-child {
+    position: absolute;
+    background: white;
+    height: 449px;
+    top: 0;
+
+    left: 280px;
+    overflow: hidden;
+    width: 918px;
+    border: 1px solid grey;
+   
+    border-left: none;
+    display:none;
+}
+.menu-item-child-one{
+    width: 286px;
+    padding: 10px 10px 10px 10px;
+    
+    float: left;
+}
+.menu-item-child-one a{
+    width: 220px;
+    text-align: left;
+}
+.menu-item-child-one a img{
+    margin-right: 10px;
+    width: 60px;
+}
+.menu-item-child-one a span{
+    color: black;
+    float: right;
+    padding-top: 20px;
+    padding-right: 30px;
+}
+.menu-photo-totol{
+    width: 7200px;
+    position:absolute;
+    
+}
+.menu-photo-item{
+    float: left;
+    cursor: pointer
+}
+.menu-photo-item a{
+    display: inline-block;
+}
+.menu-photo-item a img{
+    width: 1200px;
+    height: 450px;
+    border: none;
+}
+.menu-dot{
+    position: absolute;
+    /* width: 100px; */
+    /* bottom: 0px; */
+    height: 100px;
+    top: 400px;
+    right: 100px;
+    /* background: black; */
+    z-index: 300;
+}
+.menu-dot span {
+    width: 10px;
+    height: 10px;
+    background-color: #6f6f6987;
+    display: inline-block;
+    /* border: 1px solid white; */
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer
+}
+.menu-dot .white{
+    background-color: white;
+}
+
+.direct-left{
+    position: absolute;
+    left: 270px;
+    top: 200px;
+    width: 30px;
+    height: 60px;
+    color: #ffffff96;
+    cursor: pointer;
+    text-align:center;
+    line-height: 60px
+}
+.direct-right{
+    position: absolute;
+    right: 2px;
+    top: 200px;
+    width: 30px;
+    height: 60px;
+    color: #ffffff96;
+    cursor: pointer;
+    text-align:center;
+    line-height: 60px
+}
+ .direct-left:hover{
+     background: black;
+     color: white;
+ }
+ .direct-right:hover{
+    background: black;
+    color: white;
+}
+/*右侧小图标*/
+.all_tubiao{
+    position: fixed;
+    width: 40px;
+    text-align: center;
+    padding:10px;
+    top: 50%;
+    right: 1.6%;
+    /* background: grey; */
+    text-align:center;
+}
+.all_tubiao i{
+
+    display: block;
+    width: 40px;
+    height:40px;
+    line-height: 40px;
+    margin-top:4px;
+    background:rgb(99, 95, 95);
+    cursor: pointer;
+}
+
+.menu-bottom{
+ margin: 10px 0;
+}
+.menu-bottom .small-menu{
+    padding: 10px 10px;
+    width: 20%;
+    background-color: #00000075;
+    overflow: hidden;
+    text-align: center;
+    display: inline-block;
+}
+.menu-bottom .small-menu .small-menu-item{
+    float: left;
+    padding: 5px 3px;
+    text-align: center;
+    width: 30%;
+}
+.menu-bottom .small-menu .small-menu-item a{
+    display: block;
+    color: #d0d0d0;
+    font-size: 12px;
+}
+.menu-bottom .small-menu-right{
+    float: right;
+    width: 78%;
+    height: 114px;
+}
+.small-menu-right .small-menu-item{
+    float: right;
+    width: 31%;
+    height: 100%;
+    background: #80808030;
+    margin: 0 0px 0 20px;
+}
+.small-menu-right .small-menu-item a img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.small-menu-right .small-menu-item a {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+.quickshop{
+    margin: 20px 0px;
+    position: relative;
+}
+.quickshop h2{
+    font-weight: 100;
+    color: #695f5f;
+    padding: 10px 0px;
+}
+.quickshop-content{
+  height: 300px;
+}
+.quick-time{
+    height: 100%;
+    width: 18%;
+    background-color: #8080805c;
+    text-align: center;
+    display: inline-block;
+    border-top: 1px solid red
+}
+.quick-time img{
+    width: 80px;
+
+}
+.time-start{
+    display: block;
+    padding: 50px 0 20px 0;
+    font-size: 17px;
+}
+.time-start .time{
+    padding-right: 10px;
+    color: #ff0000a6;
+}
+.toend{
+    padding: 20px
+}
+.time-end{
+    font-size: 20px;
+}
+.time-end span{
+    width: 40px;
+    height: 40px;
+    background: black;
+    display: inline-block;
+    color: white;
+    line-height: 40px;
+    margin: 0 5px;
+}
+
+.quick-parent{
+    margin-left: 2px;
+    width: 80%;
+    overflow: hidden;
+    float: right;
+    text-align: center;
+    height: 100%;
+}
+.baoguo .quick-parent{
+   float: none;
+    width:2880px;
+    left:0px;
+    text-align: center;
+    height: 100%;
+    position: relative;;
+}
+.baoguo .quick-parent li{
+    width: 220.8px;
+}
+/*黄色伸张效果*/
+.user_talk {
+    position: absolute;
+    width: 100%;
+    height: 34%;
+    background: #ff7800;
+    top: 100%;
+    transition: all 1s ease-in-out;
+    -moz-transition:  all 1s ease-in-out;
+    -webkit-transition:  all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out; 
+}
+.baoguo .quick-item:hover .user_talk{
+    top: 66%;
+ 
+}
+.user_talk .user_language{
+    padding: 10px 10px;
+    overflow: hidden;
+    height: 40px;
+    font-size: 12px;
+    line-height: 22px;
+    text-align: left;
+    
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.user_talk .user_from{
+    font-size: 13px;
+    padding: 0 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 20px;
+   
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.quick-parent .quick-item{
+    position: relative;
+    float: left;
+    width: 23%;
+    height: 100%;
+    margin-left:  19px;
+    background: #fafafa;
+    border-top: 1px solid green;
+    cursor: pointer;
+    }
+    .quick-parent .quick-item img{
+        width: 150px;
+        margin-top: 10px;
+
+    }
+
+.quick-detail .name{
+    margin-top: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.quick-detail .special{
+    margin: 10px 0px;
+    color: grey;
+    font-size: 12px;
+}
+ .old_price{
+    text-decoration: line-through;
+}
+ .new_price{
+    color: red;
+    padding-right: 10px;
+}
+.quick-control{
+    position: absolute;
+    right: 0;
+    top: 15px;
+}
+.quick-control span{
+    height: 20px;
+    width: 40px;
+    display: inline-block;
+    border: 1px solid #8080808c;
+    text-align: center;
+    line-height: 20px;
+    margin-right: -1px;
+    font-weight: 900;
+}
+.quick-control span:hover{
+    color:#ffb200;
+    cursor: pointer;
+}
+.quick-control-end{
+    color:grey
+}
+.active-news{
+    height: 20px;
+    width: 60px;
+    display: block;
+    position: absolute;
+    top: 0;
+    font-size: 12px;
+    background: red;
+    color: white;
+    left: 78px;
+}
+.middle-tilte{
+    width: 100%;
+    height: 60px;
+    /* overflow: hidden; */
+    margin-bottom: 20px;
+}
+.middle-title img{
+    width: 100%;
+    height: 100px;
+}
+.smart .quick-time img{
+    width:100%;
+    height:300px;
+}
+.baoguo{
+    margin-left: 2px;
+    width: 80%;
+    overflow: hidden;
+    float: right;
+    text-align: center;
+    height: 100%;
+}
+.smart .quick-time{
+    border: none;
+    height: 610px;
+    background:none;
+}
+.smart .quick-time .smart-one{
+    margin-bottom: 10px;
+}
+.smart .new_price{
+    padding:0;
+}
+.smart .quickshop-content{
+    height:610px;
+}
+.smart .quick-item{
+    border: none;
+    height: 300px;
+    margin-bottom: 10px;
+   overflow: hidden;
+}
+.smart .quick-control span{
+    font-weight: normal;
+    border: none;
+    padding-right: 20px;
+}
+.smart .quick-parent{
+    display:none;
+}
+/*滚动新闻*/
+.text-floon{
+    
+    padding: 0px 20px;
+    /* overflow: hidden */
+    display: block;
+}
+.text-floon li{
+    line-height: 20px;
+    background: red;
+    /* margin: 20px 0px; */
+    padding: 20px 0px;
+    margin-bottom: 20px;
+}
+/*正反*/
+.small-menu-right .click-img{
+    overflow: hidden
+}
+.img-box{
+    width: 100%;
+   
+    transition:0.6s;
+    transform-style:preserve-3d;
+}
+.click-img{
+    perspective:1000px;
+}
+.img-box .back{
+    width: 100%;
+    float: left;
+    height: 114px;
+    line-height: 90px;
+    text-align: center;
+    background: yellow;
+}
+.img-box .font{
+    display:none;
+}
+ .img-box .back,.img-box .font{
+    width: 100%;
+   float: left;
+    height: 114px;
+}
+.img-box .font img{ height: 100%; width: 100%}
+.smart .smart-active{
+   display: block
+}
+.quick-item.small {
+    height:145px;
+}
+.quick-item.small a{
+  float:right;
+  width: 100px
+}
+.quick-item.small a img{
+   width: 100%;
+}
+.quick-item.small .quick-detail{
+    float: left;
+    margin-left: 20px
+}
+/*内容*/
+.quickshop .content-x{
+    width: 100%
+}
+.quickshop .quick-parent.content-x .quick-item{
+    width: 24%;
+    
+    margin-right: 16px;
+    margin-left: 0;
+}
+.quickshop .content-x .quick-item.last{
+    margin: 0
+}
+.quickshop .content-x .active-news{
+    left:115px;
+}
+.quickshop .quick-parent.content-x .quick-item ul {
+    overflow: hidden;
+    width: 576px;
+    position: relative;
+}
+.quickshop .quick-parent.content-x .quick-item ul li{
+    float: left;
+    width: 288px;
+    height:300px;
+}
+
+/*第一个是轮播图*/
+.quickshop .quick-parent.content-x .quick-item .left,
+.quickshop .quick-parent.content-x .quick-item .right
+{
+    display:none;
+    background: #ff70ff7a;
+   position: absolute;
+   z-index: 100;
+  
+   width: 30px;
+   height: 60px;
+   color:#d4d4d4;
+   text-align: left;
+   top: 130px;
+   line-height: 60px;
+   font-size: 20px;
+}
+
+.quickshop .quick-parent.content-x .quick-item .left{
+    left: 0px;
+}
+.quickshop .quick-parent.content-x .quick-item .right{
+    
+    left: 258px;
+    text-align: right;
+    
+}
+
+.quickshop .quick-parent.content-x .quick-item .right:hover{
+    background: grey;
+
+}
+.quickshop .quick-parent.content-x .quick-item .left:hover{
+    background: grey;
+
+}
+.quickshop .quick-parent.content-x .quick-item {
+    transition: all   0.4 ease-in ;
+   box-shadow:none;
+   margin-top:0;
+}
+.quickshop .quick-parent.content-x .quick-item:hover{
+    /* box-shadow: 0px 8px 1px #0000008a; */
+    box-shadow:0px 5px 1px 5px #aaa;
+    -webkit-box-shadow:0px 5px 1px 5px #aaa;
+    -moz-box-shadow:0px 5px 1px 5px #aaa;
+    -ms-box-shadow:0px 5px 1px 5px #aaa;;
+  margin-top: 1px;
+}
+.quickshop .quick-parent.content-x .quick-item .dot{
+    position: absolute;
+    bottom: 3px;
+    width: 100%;
+    height: 30px;
+    /* border: 1px solid black; */
+    text-align: center;
+    line-height: 40px;
+
+}
+.quickshop .quick-parent.content-x .quick-item .dot span{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 50%;
+    background: black;
+    margin-left: 10px;
+}
+.quickshop .quick-parent.content-x .quick-item .dot .white{
+    background: yellow;
+}
+.footer {
+    background: white;
+    margin-bottom: 20px;
+}
+.footer .fuwu a{
+    padding: 30px 0px;
+    display: inline-block;
+}
+.footer .fuwu a span{
+    color: grey;
+    padding: 0px 73px;
+    display: inline-block;
+    border-right: 1px solid grey
+}
+.tongdao{
+    overflow: hidden;
+}
+.tongdao table{
+    float: left;
+    width: 70%;
+    text-align: left;
+}
+.tongdao table thead tr th{
+    font-weight: 500;
+}
+.tongdao table tbody a{
+    color: grey;
+    font-size: 12px;
+    text-align: center;
+}
+.photo-number{
+    float: right;
+    height: 94px;
+  
+    text-align: center;
+}
+.photo-number .content{
+    padding: 10px 20px;
+    border-left: 1px solid grey;
+}
+.photo-number .content p{
+height: 20px;
+padding: 10px 0px;
+}

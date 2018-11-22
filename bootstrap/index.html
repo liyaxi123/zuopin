@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--引入bootstrap文件-->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+    <script src="jquery.1.10.2.js"></script>
+     <!--引入bootstrap  js-->
+    <script src="js/bootstrap.min.js"></script>  
+    </head>
+    <!-- 本案例使用了 导航栏，tab   轮播图  下拉菜单 等 -->
+  <style>
+  .carousel{ height: 400px; margin-bottom: 50px;}
+  .carousel .item { height: 400px;}
+  .carousel .item img { width: 100%} 
+  #sp {text-align: center}
+  hr { margin:50px 0 30px 0}
+  #s{ padding-left:-50px; text-align: left;}
+  .tab-content{ margin-top:30px; text-align:left}
+.border{ padding-bottom: 40px}
+.l{ text-align: left}
+  </style>
+</head>
+<body>
+  <!--导航栏开始-->
+  <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#one">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+          <a href="##" class="navbar-brand">现代浏览器博物馆</a>
+      </div>
+      <div class="navbar-collapse collapse" id="one">
+      <ul class="nav navbar-nav">
+   <li class="active"><a href="">综述</a></li>
+   <li><a href="">简述</a></li>
+   <li class="dropdown">
+       <a href="" data-toggle="dropdown" class="dropdown-toggle">
+           特点<span class="caret"></span>
+       </a>
+       <ul class="dropdown-menu">
+           <li><a href="#first">Chrome</a></li>
+           <li><a href="#second">Firefox</a></li>
+           <li><a href="#third">Safairi</a></li>
+           <li><a href="#fourth">IE</a></li>
+           <li><a href="#fiveth">IE</a></li>
+           
+       </ul>
+   </li>
+   <li><a href="#two"   data-toggle="modal">关于</a></li>
+   
+      </ul>
+    </div>
+</div>
+    </nav>
+ <!--导航条结束-->
+ <!--轮播图设计-->
+ <div class="carousel slide" id="play" data-ride="carousel"> 
+    
+     <div class="carousel-inner">
+         <div class="item active">
+             <a href=""><img src="images/chrome-big.jpg"></a>
+             <!--类carousel-caption 使内容居中-->
+             <div class="carousel-caption">
+                    <h1>Opera</h1>
+
+                    <p>Opera浏览器，是一款挪威Opera Software ASA公司制作的支持多页面标签式浏览的网络浏览器。</p>
+
+                    <p><a class="btn btn-lg btn-primary" href="http://www.opera.com/zh-cn" target="_blank"
+                          role="button">点我下载</a></p>
+                </div>
+         </div>
+         <div class="item">
+                <a href=""><img src="images/firefox-big.jpg">
+                    <div class="carousel-caption">
+                            <h1>Opera</h1>
+        
+                            <p>Opera浏览器，是一款挪威Opera Software ASA公司制作的支持多页面标签式浏览的网络浏览器。</p>
+        
+                            <p><a class="btn btn-lg btn-primary" href="http://www.opera.com/zh-cn" target="_blank"
+                                  role="button">点我下载</a></p>
+                        </div>
+                </a>
+            </div>
+            <div class="item">
+                    <a href=""><img src="images/safari-big.jpg">
+                        
+                    </a>
+                    <div class="carousel-caption">
+                            <h1>Opera</h1>
+        
+                            <p>Opera浏览器，是一款挪威Opera Software ASA公司制作的支持多页面标签式浏览的网络浏览器。</p>
+        
+                            <p><a class="btn btn-lg btn-primary" href="http://www.opera.com/zh-cn" target="_blank"
+                                  role="button">点我下载</a></p>
+                        </div>
+                </div>
+                <div class="item">
+                        <a href=""><img src="images/safari-big.jpg"></a>
+                        <div class="carousel-caption">
+                                <h1>Opera</h1>
+            
+                                <p>Opera浏览器，是一款挪威Opera Software ASA公司制作的支持多页面标签式浏览的网络浏览器。</p>
+            
+                                <p><a class="btn btn-lg btn-primary" href="http://www.opera.com/zh-cn" target="_blank"
+                                      role="button">点我下载</a></p>
+                            </div>
+                    </div>
+                    <div class="item">
+                            <a href=""><img src="images/ie-big.jpg">
+                               </a>
+                               <div class="carousel-caption">
+                                    <h1>Opera</h1>
+                
+                                    <p>Opera浏览器，是一款挪威Opera Software ASA公司制作的支持多页面标签式浏览的网络浏览器。</p>
+                
+                                    <p><a class="btn btn-lg btn-primary" href="http://www.opera.com/zh-cn" target="_blank"
+                                          role="button">点我下载</a></p>
+                                </div>
+                        </div>
+     </div>
+     <ol class="carousel-indicators">
+            <li class="active" data-target="#play" data-slide-to="0"></li>
+            <li data-target="#play" data-slide-to="1"></li>
+            <li data-target="#play" data-slide-to="2"></li>
+            <li data-target="#play" data-slide-to="3"></li>
+            <li data-target="#play" data-slide-to="4"></li>
+        </ol>
+     <a class="left carousel-control" href="#play" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+     <a class="right carousel-control" href="#play" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+ </div>
+ <!--轮播图结束-->
+ <!--三栏布局开始-->
+ <div class="container" id="sp">
+     <div class="row">
+         <div class="col-md-4">   
+                 <img src="images/chrome-logo-small.jpg">
+                 <h2>Chrome</h2>             
+            <p>Google Chrome，又称Google浏览器，是一个由Google（谷歌）公司开发的网页浏览器。</p>
+            <button type="btn" class="btn">点我下载</button>
+             </div>
+         
+         <div class="col-md-4">
+                <img src="images/chrome-logo-small.jpg">
+                <h2>Chrome</h2>
+                
+           <p>Google Chrome，又称Google浏览器，是一个由Google（谷歌）公司开发的网页浏览器。</p>
+           <button type="btn" class="btn">点我下载</button>
+         </div>
+         <div class="col-md-4">
+                <img src="images/chrome-logo-small.jpg">
+                <h2>Chrome</h2>
+                
+           <p>Google Chrome，又称Google浏览器，是一个由Google（谷歌）公司开发的网页浏览器。</p>
+           <button type="btn" class="btn">点我下载</button>
+         </div>
+     </div>
+     <hr />
+<!--三栏布局结束-->
+     <!--选项卡开始--> 
+ <ul id="myTab" class="nav nav-tabs">
+        <li class="active" ><a href="#first" data-toggle="tab">Chrome</a></li>
+        <li ><a href="#second" data-toggle="tab">Firefox</a></li>
+        <li  ><a href="#third" data-toggle="tab">safira</a></li>
+        <li ><a href="#fourth"  data-toggle="tab">Opera</a></li>
+        <li ><a href="#fiveth" data-toggle="tab">IE</a></li>
+       </ul>
+       <div class="tab-content" id="myt">
+           <div class="tab-pane active fade in" id="first">
+               <div class="container">
+                   <div class="row">
+                       <div class="col-md-7">
+                           <h2 id="s">Google Chorme<small>使用最广泛的浏览器</small></h2>
+                           <p class="lead">Safari，是苹果计算机的最新操作系统Mac OS X中的浏览器，使用了KDE的KHTML作为浏览器的运算核心。Safari在2003年1月7日首度发行测试版，并成为Mac OS X v10.3与之后的默认浏览器，也是iPhone与IPAD和iPod touch的指定浏览器。</p>                        
+                       </div>
+                       <div class="col-md-5">
+                              <img class="feature-image img-responsive" src="images/safari-logo.jpg"
+                              alt="Safari">
+                       </div>
+                   </div>
+               </div>
+           </div>
+           <div class="tab-pane fade" id="second">
+                <div class="container">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <h2 id="s">Google Chorme<small>使用最广泛的浏览器</small></h2>
+                                <p class="lead">Safari，是苹果计算机的最新操作系统Mac OS X中的浏览器，使用了KDE的KHTML作为浏览器的运算核心。Safari在2003年1月7日首度发行测试版，并成为Mac OS X v10.3与之后的默认浏览器，也是iPhone与IPAD和iPod touch的指定浏览器。</p>
+                              
+                            </div>
+                            <div class="col-md-5">
+                                   <img class="feature-image img-responsive" src="images/safari-logo.jpg"
+                                   alt="Safari">
+                            </div>
+                        </div>
+                    </div>
+           </div>
+           <div class="tab-pane fade" id="third">
+                <div class="container">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <h2 id="s">Google Chorme<small>使用最广泛的浏览器</small></h2>
+                                <p class="lead">Safari，是苹果计算机的最新操作系统Mac OS X中的浏览器，使用了KDE的KHTML作为浏览器的运算核心。Safari在2003年1月7日首度发行测试版，并成为Mac OS X v10.3与之后的默认浏览器，也是iPhone与IPAD和iPod touch的指定浏览器。</p>
+                              
+                            </div>
+                            <div class="col-md-5">
+                                   <img class="feature-image img-responsive" src="images/safari-logo.jpg"
+                                   alt="Safari">
+                            </div>
+                        </div>
+                    </div>
+           </div>
+           <div class="tab-pane fade" id="fourth">
+                <div class="container">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <h2 id="s">Google Chorme<small>使用最广泛的浏览器</small></h2>
+                                <p class="lead">Safari，是苹果计算机的最新操作系统Mac OS X中的浏览器，使用了KDE的KHTML作为浏览器的运算核心。Safari在2003年1月7日首度发行测试版，并成为Mac OS X v10.3与之后的默认浏览器，也是iPhone与IPAD和iPod touch的指定浏览器。</p>
+                              
+                            </div>
+                            <div class="col-md-5">
+                                   <img class="feature-image img-responsive" src="images/safari-logo.jpg"
+                                   alt="Safari">
+                            </div>
+                        </div>
+                    </div>
+           </div>
+           <div class="tab-pane fade" id="fiveth">
+                <div class="container">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <h2 id="s">Google Chorme<small>使用最广泛的浏览器</small></h2>
+                                <p class="lead">Safari，是苹果计算机的最新操作系统Mac OS X中的浏览器，使用了KDE的KHTML作为浏览器的运算核心。Safari在2003年1月7日首度发行测试版，并成为Mac OS X v10.3与之后的默认浏览器，也是iPhone与IPAD和iPod touch的指定浏览器。</p>
+                              
+                            </div>
+                            <div class="col-md-5">
+                                   <img class="feature-image img-responsive" src="images/safari-logo.jpg"
+                                   alt="Safari">
+                            </div>
+                        </div>
+                    </div>
+           </div>
+       </div>
+        <!--选项卡结束-->
+        <footer>
+                <p class="pull-right"><a href="#top">回到顶部</a></p>
+         </footer>
+    </div>
+<!--弹出框 要放于body中避免不正常显示-->
+<div class="modal fade" id="two">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">   
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">关于</h4>
+                </div>
+                <div class="modal-body">
+                    <p>慕课网隶属于北京慕课科技中心(有限合伙)，是一家从事互联网免费教学的网络教育公司。秉承“开拓、创新、公平、分享”的精神， 将互联网特性全面的应用在教育领域，致力于为教育机构及求学者打造一站式互动在线教育品牌</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" data-dismiss="modal">保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--弹出框结束-->
+    <script>
+    //实现下拉菜单的定位
+    $(function(){
+        $('.dropdown-menu a').click(function(){
+            $th = $(this).attr('href');
+            //tab方法只能用于tab标签中 选择的元素必须是a标签
+            $('#myTab a[href="'+$th+'"]').tab('show');
+        })
+    })
+    </script>
+ </body>
+</html>

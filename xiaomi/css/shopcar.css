@@ -1,0 +1,286 @@
+.car_content{
+    background: rgba(173, 169, 169, 0.54);
+    margin-top: 1em;
+}
+.car_content .title h2{
+    padding:1em 1em;
+    color: #252222;
+    font-weight: 300;
+}
+.car_content .title{
+    background: cadetblue;
+}
+.car_content .car_table{
+    margin: 1em 0;
+    
+}
+.car_table table{
+    width: 100%
+}
+.car_table table thead{
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+}
+.car_table table tr{
+    margin-bottom: 1em;
+    background: #f5f565;
+    display: block;
+}
+.car_table table td{
+    border-collapse: collapse;
+}
+.car_table table label{
+    height: 3em;
+    display: inline-block;
+    line-height: 3em;
+}
+.car_table table label input{
+    width: 1.4em;
+    height: 1.4em;
+    display: inline-block;
+    /* display: block; */
+    margin: right;
+    margin-right: 0.5em;
+    vertical-align: middle;
+}
+.tong_one{
+width: 6em;
+}
+tbody .tong_one input{
+    width: 1.4em;
+    height: 1.4em;
+    display: inline-block;
+
+    margin: right;
+    
+    vertical-align: middle;
+    margin-left: 1.4em
+}
+thead .tong_two{
+    width: 26.6em;
+    padding-left: 8.4em;
+    text-align: left
+ }
+.tong_three{
+    width: 5em;   
+ }
+ .tong_four{
+    width: 20em;
+ }
+ .tong_five{
+    width: 4em;
+}
+.tong_six{
+    width: 6em;   
+}
+tbody{
+    font-size: 14px;
+    color: blueviolet;
+}
+tbody .tongbu_one input{
+    margin-left: 1.4em;
+}
+tbody img{
+    display: block;
+    padding-right: 4.3em;
+}
+tbody .tong_two{
+    width: 29.6em;
+}
+tbody .tong_three{
+    width: 6.7em;
+    text-align: center;
+}
+
+tbody .tong_four{
+    text-align: center;
+    padding-left: 0.6em;
+}
+tbody .tong_four .xiao{
+    background: #31ff00;
+    width: 1em;
+    display: inline-block;
+    text-align: center;
+    height: 2em;
+    vertical-align: middle;
+    line-height: 2em;
+    cursor: pointer;
+}
+tbody .tong_four .add{
+    background: cyan;
+    width: 1em;
+    display: inline-block;
+    text-align: center;
+    height: 2em;
+    vertical-align: middle;
+    line-height: 2em;
+    
+    cursor: pointer;
+}
+tbody .tong_four input{
+    height: 2em;
+    width: 2em;
+    border: 0;
+    display: inline-block;
+    text-align:center
+}
+tbody .tong_five{
+    width: 6em;
+    text-align: center;
+    /* padding-left: 1em; */
+    padding: 0 0.5em;
+}
+tbody .tong_six{
+    text-align: center;
+    cursor: pointer;
+    width: 4em;
+    padding-right: 1.6em;
+}
+.youhui {
+    background: yellowgreen;
+    padding: 2em 1em;
+    font-size: 15px;
+    font-weight: 500;
+    overflow: hidden;
+}
+.youhui span{
+    margin-top: 2em;
+    display: block;
+    float: left;
+    margin-left: 2em;
+}
+.youhui .add{
+    margin-left:0;
+    display: inline-block;
+    height: 2em;
+    width: 2em;
+    text-align: center;
+    background: #fd4242;
+    line-height: 2em;
+    border-radius: 50%;
+    margin-right: 2.7em;
+}
+.youhui span {
+    display: block;
+    float: left
+
+}
+.youhui a{
+    display: block;
+    float: left
+}
+.car_table_total{
+    padding: 2em 1.2em;
+    margin-top: 1em;
+    background: beige;
+    overflow: hidden;
+    line-height: 4.313em;
+}
+.car_table_total a{
+    color: darkslategrey;
+    float: left
+}
+.car_table_total span .total_jian,.car_table_total span .total_price,
+.car_table_total span .total_chose{
+    padding-left: 0;
+    color: red
+}
+.car_table_total span{
+    padding-left: 3em;
+    height: 4.313em;
+    float:left
+}
+.car_table_total .span_heji{
+    margin-left: 0em;
+    margin-right: 4em;
+ 
+    display: inline-block;
+    text-align: right;
+    float: right;
+}
+.car_table_total .chuqian{
+    background: red;
+    padding: 0 2em;
+    cursor: pointer;
+    border-radius: 10px;
+    height: 0;
+    display: block;
+    height: 4em;
+    padding-left: text;
+    text-align: center;
+    line-height: 4em;
+    float: right
+}
+.car_content p{
+    margin: 1em;
+    color: red;
+    font-size: 15px;
+}
+tbody .tong_six:hover{
+    background: grey;
+}
+ tbody .tong_six span{
+    padding-left: 1em
+ }
+ .youhui .add:hover{
+     cursor: pointer;
+ }
+ /*遮罩*/
+ .zhezhao{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #0000002b;
+    display: none;
+    /* opacity: 0.4; */
+ }
+ .zhezhao .content{
+    background: #f3eded;
+    width: 40em;
+    height: 20em;
+    margin: 4em auto;
+    opacity: 1;
+    border: 1px solid black;
+    border-radius: 10px;
+ }
+ .zhezhao .title{
+    margin-left: 2em;
+    height: 5em;
+    width: 16em;
+    margin: 0em auto;
+    text-align: center;
+    padding: 2em;
+    line-height: 5em;
+    font-size: 20px;
+    margin-bottom: 3em;
+ }
+ .zhezhao .queding{
+    float: left;
+    width: 2em;
+    height: 2em;
+    background: orangered;
+    display: inline-block;
+    padding: 1em;
+    vertical-align: middle;
+    line-height: 2em;
+    /* margin-left: 10em; */
+    /* margin-right: 11em; */
+    margin-left: 10em;
+    cursor: pointer
+ }
+ .zhezhao .quxiao{
+    width: 2em;
+    height: 2em;
+    background: #a7948e;
+    display: inline-block;
+    padding: 1em;
+    vertical-align: middle;
+    line-height: 2em;
+    float: right;
+    
+    margin-right: 10em;
+    cursor: pointer
+ }
